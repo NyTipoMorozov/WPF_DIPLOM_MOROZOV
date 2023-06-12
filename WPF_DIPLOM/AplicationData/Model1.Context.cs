@@ -15,19 +15,19 @@ namespace WPF_DIPLOM.AplicationData
     
     public partial class diplomEntities : DbContext
     {
-        private static diplomEntities _context;
+        private static diplomEntities _contex;
+
+        public static diplomEntities GetContext()
+        {
+            if (_contex == null)
+                _contex = new diplomEntities();
+            return _contex;
+        }
         public diplomEntities()
             : base("name=diplomEntities")
         {
-
         }
-        public static diplomEntities GetContext()
-        {
-            if (_context == null)
-                _context = new diplomEntities();
-            return _context;
-        }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -36,6 +36,7 @@ namespace WPF_DIPLOM.AplicationData
         public virtual DbSet<Cars> Cars { get; set; }
         public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<Items> Items { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }
 }

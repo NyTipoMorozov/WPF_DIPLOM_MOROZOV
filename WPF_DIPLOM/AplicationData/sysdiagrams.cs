@@ -12,21 +12,12 @@ namespace WPF_DIPLOM.AplicationData
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class sysdiagrams
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users()
-        {
-            this.Client = new HashSet<Client>();
-        }
-    
-        public int ID { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public string Name { get; set; }
-        public bool IdRole { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Client> Client { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

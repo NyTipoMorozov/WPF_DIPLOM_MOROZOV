@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_DIPLOM.AplicationData;
 
 namespace WPF_DIPLOM.PageMain
 {
@@ -33,6 +34,16 @@ namespace WPF_DIPLOM.PageMain
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new PageItems());
+        }
+
+        private void btExit_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.FrameMain.Navigate(new PageMain.PageLogin());
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            AppFrame.FrameMain.Navigate(new PageMain.PageClient());
         }
     }
 }

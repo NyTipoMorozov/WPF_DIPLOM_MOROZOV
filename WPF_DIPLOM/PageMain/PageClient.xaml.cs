@@ -17,34 +17,32 @@ using WPF_DIPLOM.AplicationData;
 namespace WPF_DIPLOM.PageMain
 {
     /// <summary>
-    /// Логика взаимодействия для PageItems.xaml
-    /// Да
+    /// Логика взаимодействия для PageClient.xaml
     /// </summary>
-    public partial class PageItems : Page
+    public partial class PageClient : Page
     {
-        public PageItems()
+        public PageClient()
         {
             InitializeComponent();
-            DtGridTovar.ItemsSource = diplomEntities.GetContext().Items.ToList();
+            DtGridTovar.ItemsSource = diplomEntities.GetContext().Client.ToList();
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            AppFrame.FrameMain.Navigate(new PageItemsAdd((sender as Button).DataContext as Items));
+            AppFrame.FrameMain.Navigate(new PageClientAdd((sender as Button).DataContext as Client));
         }
 
         private void btnDel_Click(object sender, RoutedEventArgs e)
         {
-            var ItemsForRemoning = DtGridTovar.SelectedItems.Cast<Items>().ToList();
-            if (MessageBox.Show($"Вы точно хотите удалить следующее {ItemsForRemoning.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            var tovarForRemoning = DtGridTovar.SelectedItems.Cast<Client>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить следующее {tovarForRemoning.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
-                    diplomEntities.GetContext().Items.RemoveRange(ItemsForRemoning);
+                    diplomEntities.GetContext().Client.RemoveRange(tovarForRemoning);
                     diplomEntities.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены");
-
-                    DtGridTovar.ItemsSource = diplomEntities.GetContext().Items.ToList();
+                    DtGridTovar.ItemsSource = diplomEntities.GetContext().Client.ToList();
                 }
                 catch (Exception ex)
                 {
@@ -52,25 +50,25 @@ namespace WPF_DIPLOM.PageMain
                 }
             }
         }
-    
-
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
-        {
-            AppFrame.FrameMain.Navigate(new PageItemsAdd(null));
-        }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             AppFrame.FrameMain.Navigate(new PageMain.PagesList());
         }
 
-        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.FrameMain.Navigate(new PageClientAdd(null));
+        }
+
+        private void Page_IsVisibleChanged_1(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (Visibility == Visibility.Visible)
             {
                 diplomEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DtGridTovar.ItemsSource = diplomEntities.GetContext().Items.ToList();
+                DtGridTovar.ItemsSource = diplomEntities.GetContext().Client.ToList();
             }
         }
     }
+
 }

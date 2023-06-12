@@ -27,5 +27,20 @@ namespace WPF_DIPLOM.AplicationData
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Client> Client { get; set; }
+
+        public string Valuta
+        {
+            get
+            {
+                return Price + " рублей";
+            }
+        }
+        public string Quantity1
+        {
+            get
+            {
+                return Price + " шт.";
+            }
+        }
     }
 }

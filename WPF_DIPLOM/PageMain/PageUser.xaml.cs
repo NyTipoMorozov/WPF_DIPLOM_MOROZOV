@@ -31,5 +31,10 @@ namespace WPF_DIPLOM.PageMain
         {
             AppFrame.FrameMain.Navigate(new PageMain.PageLogin());
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.FrameMain.Navigate(new PageMain.PageClientAdd(null));
+        }
     }
 }

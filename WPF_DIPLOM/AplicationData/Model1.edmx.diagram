@@ -4,13 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="493838a39f51463aa92608ed4df15fea" Name="Diagram1" ZoomLevel="82">
-        <EntityTypeShape EntityType="diplomModel.Cars" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+      <Diagram DiagramId="f71b996c5cf142dc9e6008bc4bd9fb59" Name="Diagram1">
+        <EntityTypeShape EntityType="diplomModel.Cars" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="diplomModel.Client" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="diplomModel.Items" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="diplomModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="diplomModel.Users" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
         <AssociationConnector Association="diplomModel.FK_Client_Cars" ManuallyRouted="false" />
         <AssociationConnector Association="diplomModel.FK_Client_Items" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="diplomModel.Users" Width="1.5" PointX="6.375" PointY="3.25" />
+        <AssociationConnector Association="diplomModel.FK_Client_Users" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

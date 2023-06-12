@@ -97,6 +97,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="AplicationData\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="AplicationData\Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -113,6 +116,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageMain\PageCarsAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageMain\PageClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageMain\PageClientAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,6 +158,12 @@
     </Compile>
     <Compile Include="PageMain\PageCarsAdd.xaml.cs">
       <DependentUpon>PageCarsAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageMain\PageClient.xaml.cs">
+      <DependentUpon>PageClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageMain\PageClientAdd.xaml.cs">
+      <DependentUpon>PageClientAdd.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageMain\PageItems.xaml.cs">
       <DependentUpon>PageItems.xaml</DependentUpon>
@@ -211,21 +228,23 @@
   <ItemGroup>
     <Resource Include="ico.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\car1.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="AplicationData\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="AplicationData\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

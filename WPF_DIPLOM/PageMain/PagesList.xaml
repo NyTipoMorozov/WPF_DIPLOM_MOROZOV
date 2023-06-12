@@ -11,13 +11,16 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="193*"/>
+            <RowDefinition Height="27*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="1">
+        <StackPanel Grid.Row="1" Grid.RowSpan="2">
             <TextBlock Style="{StaticResource TextBlock}" Text="Выберите таблицу для просмотра" HorizontalAlignment="Center" FontSize="20"/>
             <Button Style="{StaticResource ButtonG}" Content="Автомобили" HorizontalAlignment="Center" Click="Button_Click"/>
             <Button Style="{StaticResource ButtonG}" Content="Аксессуары" HorizontalAlignment="Center" Click="Button_Click_1"/>
+            <Button Style="{StaticResource ButtonG}" Content="Клиенты" HorizontalAlignment="Center" Click="Button_Click_2"/>
         </StackPanel>
+        <Button Grid.Row="2" x:Name="btExit" Style="{StaticResource ButtonY}" Content="Выход" HorizontalAlignment="Center" Click="btExit_Click"/>
 
 
     </Grid>
