@@ -19,7 +19,7 @@
             <PropertyRef Name="ClientID" />
           </Key>
           <Property Name="ClientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CarID" Type="int" Nullable="false" />
+          <Property Name="CarID" Type="int" />
           <Property Name="ItemsID" Type="int" />
           <Property Name="UserID" Type="int" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -59,7 +59,7 @@
           <Property Name="IdRole" Type="bit" Nullable="false" />
         </EntityType>
         <Association Name="FK_Client_Cars">
-          <End Role="Cars" Type="Self.Cars" Multiplicity="1" />
+          <End Role="Cars" Type="Self.Cars" Multiplicity="0..1" />
           <End Role="Client" Type="Self.Client" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Cars">
@@ -133,7 +133,7 @@
             <PropertyRef Name="ClientID" />
           </Key>
           <Property Name="ClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CarID" Type="Int32" Nullable="false" />
+          <Property Name="CarID" Type="Int32" />
           <Property Name="ItemsID" Type="Int32" />
           <Property Name="UserID" Type="Int32" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
@@ -178,7 +178,7 @@
           <NavigationProperty Name="Client" Relationship="Self.FK_Client_Users" FromRole="Users" ToRole="Client" />
         </EntityType>
         <Association Name="FK_Client_Cars">
-          <End Role="Cars" Type="Self.Cars" Multiplicity="1" />
+          <End Role="Cars" Type="Self.Cars" Multiplicity="0..1" />
           <End Role="Client" Type="Self.Client" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Cars">

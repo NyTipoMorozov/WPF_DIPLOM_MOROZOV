@@ -39,8 +39,9 @@ namespace WPF_DIPLOM.AplicationData
         {
             get
             {
-                return Price + " шт.";
+                return Quantity + " шт.";
             }
         }
+
     }
 }

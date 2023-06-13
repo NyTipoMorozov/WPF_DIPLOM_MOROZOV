@@ -40,7 +40,7 @@ namespace WPF_DIPLOM.PageMain
             if (string.IsNullOrWhiteSpace(_currentClient.Name))
                 errors.AppendLine("Укажите Имя");
             if (string.IsNullOrWhiteSpace(_currentClient.ThirdName))
-                errors.AppendLine("Укажите Отчество (если имеется)");
+                errors.AppendLine("Укажите Отчество");
             if (string.IsNullOrWhiteSpace(_currentClient.PhoneNumber))
                 errors.AppendLine("Укажите номер телефона");
             if (string.IsNullOrWhiteSpace(_currentClient.email))

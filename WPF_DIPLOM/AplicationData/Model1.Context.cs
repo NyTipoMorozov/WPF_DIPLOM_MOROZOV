@@ -23,6 +23,7 @@ namespace WPF_DIPLOM.AplicationData
                 _contex = new diplomEntities();
             return _contex;
         }
+
         public diplomEntities()
             : base("name=diplomEntities")
         {

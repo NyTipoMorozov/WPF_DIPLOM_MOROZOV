@@ -57,7 +57,6 @@ namespace WPF_DIPLOM.PageMain
                             break;
                     }
 
-
                 }
             }
 

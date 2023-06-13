@@ -17,19 +17,19 @@ using WPF_DIPLOM.AplicationData;
 namespace WPF_DIPLOM.PageMain
 {
     /// <summary>
-    /// Логика взаимодействия для PageUser.xaml
+    /// Логика взаимодействия для PageUserItem.xaml
     /// </summary>
-    public partial class PageUser : Page
+    public partial class PageUserItem : Page
     {
-        public PageUser()
+        public PageUserItem()
         {
             InitializeComponent();
-            DtGridTovar.ItemsSource = diplomEntities.GetContext().Cars.ToList();
+            DtGridTovar.ItemsSource = diplomEntities.GetContext().Items.ToList();
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void btnCars_Click(object sender, RoutedEventArgs e)
         {
-            AppFrame.FrameMain.Navigate(new PageMain.PageLogin());
+            AppFrame.FrameMain.Navigate(new PageMain.PageUser());
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -37,9 +37,9 @@ namespace WPF_DIPLOM.PageMain
             AppFrame.FrameMain.Navigate(new PageMain.PageClientAdd(null));
         }
 
-        private void btnItem_Click(object sender, RoutedEventArgs e)
+        private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            AppFrame.FrameMain.Navigate(new PageMain.PageUserItem());
+            AppFrame.FrameMain.GoBack();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace WPF_DIPLOM.AplicationData
     public partial class Client
     {
         public int ClientID { get; set; }
-        public int CarID { get; set; }
+        public Nullable<int> CarID { get; set; }
         public Nullable<int> ItemsID { get; set; }
         public Nullable<int> UserID { get; set; }
         public string Name { get; set; }

@@ -147,6 +147,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageMain\PageUserItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageMain\PageСreateAcc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -179,6 +183,9 @@
     </Compile>
     <Compile Include="PageMain\PageUser.xaml.cs">
       <DependentUpon>PageUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageMain\PageUserItem.xaml.cs">
+      <DependentUpon>PageUserItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageMain\PageСreateAcc.xaml.cs">
       <DependentUpon>PageСreateAcc.xaml</DependentUpon>
@@ -217,9 +224,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\road.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\icon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -232,9 +236,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\car1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="AplicationData\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -245,6 +246,14 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\item.png" />
+    <Resource Include="Resources\car1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestProject\TestProject.csproj">
+      <Project>{c09577b2-524a-431b-a312-56945ad2d7bf}</Project>
+      <Name>TestProject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
