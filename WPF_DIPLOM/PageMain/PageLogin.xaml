@@ -15,8 +15,9 @@
             <Label Content="Введите пароль" Style="{StaticResource Label}"/>
             <PasswordBox Style="{StaticResource PasswordBox}" x:Name="psbPassword"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Регистрация" Style="{StaticResource ButtonY}" Click="Button_Click"/>
+                <Button Content="Регистрация" Style="{StaticResource ButtonG}" Click="Button_Click"/>
                 <Button Content="Войти" Style="{StaticResource ButtonG}" Click="Button_Click_1"/>
+                <Button Content="Гость" Style="{StaticResource ButtonY}" Click="Button_Click_2"/>
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -66,6 +66,11 @@ namespace WPF_DIPLOM.PageMain
                 "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            AppFrame.FrameMain.Navigate(new PageMain.PageGost1());
+        }
     }
     }
 

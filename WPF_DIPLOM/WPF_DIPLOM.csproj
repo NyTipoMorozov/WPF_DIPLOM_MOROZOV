@@ -127,6 +127,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageMain\PageGost1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageMain\PageGost2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageMain\PageItems.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -168,6 +176,12 @@
     </Compile>
     <Compile Include="PageMain\PageClientAdd.xaml.cs">
       <DependentUpon>PageClientAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageMain\PageGost1.xaml.cs">
+      <DependentUpon>PageGost1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageMain\PageGost2.xaml.cs">
+      <DependentUpon>PageGost2.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageMain\PageItems.xaml.cs">
       <DependentUpon>PageItems.xaml</DependentUpon>
